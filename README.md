@@ -7,3 +7,5 @@
 ## Run with docker
 
 - docker-compose up -d
+
+### Insomnia Collection in docs folder
