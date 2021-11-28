@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  interview-nodejs:
+    build:
+      context: .
+      dockerfile: ./devops/Dockerfile
+    image: nodejs
+    restart: always
+    env_file: .env
+    environment:
+      - PORT=3002
+    depends_on:
+      - interview-postgres
+    ports:
+        - "3001:3002"
+networks:
+  default:
